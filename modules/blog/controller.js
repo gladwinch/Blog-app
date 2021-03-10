@@ -13,7 +13,6 @@ exports.create = asyncHandler(async (req, res, next) => {
 
     // get blog image
     const images = await upsplash(req.body.tags)
-    console.log('images: ', images)
     req.body.smimage = images.smimage
     req.body.mdimage = images.mdimage
   
